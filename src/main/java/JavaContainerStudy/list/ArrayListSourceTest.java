@@ -1,6 +1,8 @@
 package JavaContainerStudy.list;
 
 import java.util.ArrayList;
+import java.util.Vector;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * @Description: ArrayList源码代码测试
@@ -14,7 +16,6 @@ public class ArrayListSourceTest {
 
         ArrayList<String> arrayList=new ArrayList<>();
 
-
         //应用程序也可以使用ensureCapacity操作来增加ArrayList实例的容量，这可以减少递增式再分配的数量
         arrayList.ensureCapacity(10);
 
@@ -23,6 +24,7 @@ public class ArrayListSourceTest {
         int newCapacity = oldCapacity + (oldCapacity >> 1);
 
         System.out.println("newCapacity :"+newCapacity);
+
 
 
     }

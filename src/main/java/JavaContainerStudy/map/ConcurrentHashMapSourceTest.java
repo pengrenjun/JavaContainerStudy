@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentSkipListMap;
 import java.util.concurrent.CountDownLatch;
 
 /*
@@ -22,8 +23,10 @@ public class ConcurrentHashMapSourceTest {
     public static void main(String[] args) throws Exception {
         Map<String, Integer> hashmapSync = Collections
                 .synchronizedMap(new HashMap<String, Integer>());
-        Map<String, Integer> concurrentHashMap = new ConcurrentHashMap<String, Integer>();
+        ConcurrentHashMap<String, Integer> concurrentHashMap = new ConcurrentHashMap<String, Integer>();
         Map<String, Integer> hashtable = new Hashtable<String, Integer>();
+
+        ConcurrentSkipListMap concurrentSkipListMap=new ConcurrentSkipListMap();
 
         long totalA = 0L;
         long totalB = 0L;
